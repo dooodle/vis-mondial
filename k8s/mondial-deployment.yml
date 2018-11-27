@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mondial-deployment
+  labels:
+    app: mondial
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mondial
+  template:
+    metadata:
+      labels:
+        app: mondial
+    spec:
+      containers:
+      - name: mondial
+        image: dooodle/vis-mondial:latest
+        ports:
+        - containerPort: 5432
