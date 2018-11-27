@@ -3,7 +3,7 @@ services:
   - docker
 
 script:
-  - docker build -t ilanpillemer/vis-mondial .
+  - docker build -t dooodle/vis-mondial .
 
 after_script:
   - docker images
