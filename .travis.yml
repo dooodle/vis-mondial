@@ -5,14 +5,14 @@ services:
 script:
   - docker build -t dooodle/vis-mondial .
   - bash install-kubectl
+  - bash docker_push
 
 after_script:
   - docker images
+  - kubectl get pods
 
 deploy:
   provider: script
-  script:
-    - bash docker_push
-    - kubectl get pods
+  script: kubectl get pods
   on:
     branch: master
