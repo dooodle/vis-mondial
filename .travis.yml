@@ -11,6 +11,8 @@ script:
 after_script:
   - docker images
   - kubectl get pods
+  - kubectl patch deployment mondial-deployment -p   "{\"spec\":{\"template\":{\"metadata\":{\"annotations\":{\"date\":\"`date +'%s'`\"}}}}}"
+  - kubectl get pods
 
 deploy:
   provider: script
