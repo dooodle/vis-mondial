@@ -4,6 +4,7 @@ services:
 
 script:
   - docker build -t dooodle/vis-mondial .
+  - bash install_kubectl
 
 after_script:
   - docker images
