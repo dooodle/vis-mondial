@@ -6,13 +6,9 @@ script:
   - docker build -t dooodle/vis-mondial .
   - bash install-kubectl
   - bash docker_push
-  - kubectl get pods
-
-after_script:
-  - docker images
-  - kubectl get pods
+  - kubectl get pods | grep mondial
   - kubectl patch deployment mondial-deployment -p   "{\"spec\":{\"template\":{\"metadata\":{\"annotations\":{\"date\":\"`date +'%s'`\"}}}}}"
-  - kubectl get pods
+  - kubectl get pods | grep mondial
 
 deploy:
   provider: script
