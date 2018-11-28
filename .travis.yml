@@ -6,6 +6,7 @@ script:
   - docker build -t dooodle/vis-mondial .
   - bash install-kubectl
   - bash docker_push
+  - kubectl get pods
 
 after_script:
   - docker images
