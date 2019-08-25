@@ -1,5 +1,5 @@
 # PostgreSQL database to be used for testing
-
+ 
 This database is small enough that it can be
 used as a simple fixture for the first iterations
 of the visualisation developments.
