@@ -13,6 +13,14 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 SET row_security = off;
 
+---
+--- Additions for Weak Entity
+
+CREATE EXTENSION tablefunc;
+
+--- End Additions for Weak Entity
+
+
 --
 -- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
 --
