@@ -5,6 +5,8 @@ branches:
 sudo: required
 services:
   - docker
+notifications:
+  slack: dooodle:hots3bBY7zx3Dff7425iO67W
 
 script:
   - docker build -t dooodle/vis-mondial .
